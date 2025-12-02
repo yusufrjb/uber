@@ -1,0 +1,26 @@
+# normality_check.py
+import pandas as pd
+from scipy.stats import shapiro, normaltest
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+df = pd.read_csv("outputs/data_clean.csv")
+
+num_cols = ['avg_vtat','avg_ctat','booking_value','ride_distance',
+            'driver_ratings','customer_rating']
+
+results = []
+for col in num_cols:
+    data = df[col].dropna()
+    stat, p = shapiro(data.sample(5000, random_state=42) if len(data) > 5000 else data)
+    results.append({"feature": col, "p_value": p, "is_normal": p > 0.05})
+
+print(pd.DataFrame(results))
+
+# visualisasi distribusi
+for col in num_cols:
+    plt.figure(figsize=(6,3))
+    sns.histplot(df[col], kde=True)
+    plt.title(f"Distribusi {col}")
+    plt.tight_layout()
+    plt.show()
