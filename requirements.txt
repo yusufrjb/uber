@@ -7,6 +7,8 @@ prophet==1.2.1
 joblib==1.1.1       # Versi yang lebih kompatibel dengan Python 3.11
 plotly==5.8.0
 pyarrow==11.0.0
-numpy==1.26.4
+numpy==1.23.5
+
+
 
 
