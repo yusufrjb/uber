@@ -1,0 +1,4 @@
+customer_segment,total_trips,completed_trips,incomplete_trips,cancelled_trips,avg_booking_value,avg_ride_distance,avg_driver_rating,avg_customer_rating,avg_vtat,avg_ctat,weekend_ratio,peak_ratio,completion_rate,cancel_rate
+0,1.02,0.01,1.0,0.0,499.26,10.6,4.22,4.41,6.03,20.19,0.28,0.44,0.01,0.0
+1,1.01,0.01,0.0,1.0,1.19,0.07,4.27,4.45,8.86,29.16,0.28,0.43,0.0,1.0
+2,1.01,1.0,0.0,0.0,498.55,25.99,4.23,4.4,8.51,30.04,0.29,0.43,1.0,0.0
